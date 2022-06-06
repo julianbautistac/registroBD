@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+        <title>Iniciar Sesion</title>
+    </head>
+    <body>
+        <br> <br>
+        <div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card text-center">
+				<h3>Registro de usuarios</h3>
+				
+			</div>
+			<div class="card-body">
+                            <form action="registro.php" method="post">
+					
+						<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Nombre</span>
+						</div>
+						<input type="text" class="form-control" name="nombre" placeholder="nombre" id="nombre" required>
+					</div>
+						<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Ap. Paterno:</span>
+						</div>
+						<input type="text" class="form-control" name="ap_pat" placeholder="Apellido Paterno" id="ap_pat" required>
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Ap. Materno:</span>
+						</div>
+						<input type="text" class="form-control" name="ap_mat" placeholder="Apellido Materno" id="ap_mat">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-calendar"></i></i></span>
+						</div>
+						<input type="date" class="form-control" name="fnac" placeholder="fecha de nacimiento" id="fnac" required>
+						
+					</div>					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" name="usuario" placeholder="usuario" id="user" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" name="pwd" placeholder="contraseña" id="pwd" required>
+					</div>
+                                <div class="card text-center">
+                                <input name="enviar"type="submit" class="btn btn-primary btn-lg" value="Enviar">
+                                
+                            </div>
+				</form>
+                            
+			</div>
+			
+		</div>
+	</div>
+</div>
+    </body>
+</html>
