@@ -1,2 +1,2 @@
 # registroBD
-Registro de usuarios, login para base de datos, practica 10
+Registro de usuarios, login para base de datos, práctica 10
