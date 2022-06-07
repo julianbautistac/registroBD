@@ -24,7 +24,7 @@ if($name != null && $appat != null && $apmat!=null && $fecha != null && $user_f 
                 echo "Se registro<br>";
         else
                 echo "No se registro<br>";
-        echo $sql;
+       // echo $sql;
         mysqli_close($link);		
 }
 // verificamos que se reciba la informacion del formulario

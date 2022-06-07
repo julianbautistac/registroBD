@@ -1,22 +1,28 @@
-<?php
-   $user = $_POST["usuario"];
-   $pass = $_POST["pwd"];
 
-   if($user != null && $pass!=null){
-	   echo "Se recibieron los datos";
-	   // conexion a la BD
-	   $link = mysqli_connect();
-	   $sql = "select nombre, ap_pat, ap_mat from usuarios where login='$user' and password='$pass'";
-	   if($result = mysqli_query($link, $sql)){
-		   while($row = mysqli_fetch_array($result)){
-		    // si existe el usuario
-		$nombre = $row["nombre"];
-		$appat = $row["ap_pat"];
-		$apmat = $row["ap_mat"];
-		echo "nombre = $nombre $appat $apmat";
-		   }
-	   }mysqli_close($link);
-   }else{
-     header("Location: login.php?error=1");	
-   }
+<?php
+require 'conexion.php';
+$usuario = $_POST['usuario'];
+$contrasenia = $_POST['pwd'];
+session_start();
+
+$_SESSION['usuario']=$usuario;
+
+$consulta="SELECT * FROM usuarios where usuario='$usuario' and contrasenia='$pwd'";
+$resultado=mysqli_query($conexion,$consulta);
+
+$filas=mysqli_num_rows($resultado);
+
+if($filas){
+
+	header("location:home.php");
+}else{
+
+	include("index.php");
+	<h1 class="bad">Error en la autentificacion</h1>
+
+}
+
+mysqli_free_result($resultado);
+mysqli_close($conexion);
+
 ?>
