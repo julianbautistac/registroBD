@@ -1,19 +1,10 @@
 <?php
 //creamos los datos para conectarnos a la base de datos
-$host="localhost";
-$bd="db2022";
-$usuario="root";
-$contrasenia="";
-
-try {
-    //enviamos las variables con sus valores para ingresar a a base de datos
-    $conexion=new PDO("mysql:host=$host; dbname=$bd",$usuario,$contrasenia);
-    
-    if($conexion){echo "conectado... a sistema";}
-
-} catch (Exception $ex) {
-    
-    echo $ex->getMessage();
-    
-}
+$server = "localhost";
+$usuario = "root";	// cambiar usuario
+$pass = "";		// cambiar contraseña
+$db = "db2022";
+$conexion = mysqli_connect($server, $usuario, $pass, $db) or die("Error en ".mysqli_error($link));
+//$link = mysqli_connect($server, $db) or die("Error en ".mysqli_error($link));
+//echo "Conexion Establecida<br>"; 
 ?>
